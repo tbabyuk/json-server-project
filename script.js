@@ -24,67 +24,21 @@ const detailsBox = document.querySelector("#details-box")
 // 1. INITIAL RENDER, SORTING, FILTERING STUDENTS (GET REQUESTS)
 
 const fetchStudents = async (url) => {
-
-    const res = await fetch(url)
-    const students = await res.json()
-
-    let html = ""
-
-    students.forEach(student => {
-        html+= `
-            <div class="student">
-                <span class="delete-student">&times</span>
-                <h3>${student.name}</h3>
-                <p>Major: ${student.major}</p>
-                <button class="details-button">Student Details</button>
-                <p hidden class="id">${student.id}</p>
-            </div>
-        `
-    })
-    
-    studentList.innerHTML = html
+// enter code here
 }
 
 
 // 2. FETCHING STUDENT DETAILS (GET REQUEST)
 
 const fetchStudentDetails = async (url) => {
-
-    const res = await fetch(url)
-    const student = await res.json()
-
-    let html = `
-            <p><strong>Name:</strong> ${student.name}</p>
-            <p><strong>Email:</strong> ${student.email}</p>
-            <p><strong>YOB:</strong> ${student.yob}</p>
-            <p><strong>Major:</strong> ${student.major}</p>
-            `
-
-    detailsBox.innerHTML = html
+// enter code here
 }
 
 
 // 3. ADDING, DELETING A STUDENT (POST & DELETE REQUESTS)
 
 const addOrDeleteStudent = async (url, studentObject) => {
-
-    if (url, studentObject) {
-
-        // this is an add student request
-        fetch(url, {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(studentObject)
-        })
-        
-    } else {
-
-        // this is a delete student request
-        fetch(url, {
-            method: "DELETE",
-            headers: {"Content-Type": "application/json"}
-        })
-    }
+// enter code here
 }
 
 
@@ -110,41 +64,25 @@ btnSortAlphabetically.addEventListener("click", () => {
 
 // Filter students by major button/select element
 btnFilterByMajor.addEventListener("change", (e) => {
-    const major = e.target.value
 // enter code here
 })
 
 
 // Delete a student buttons
 studentList.addEventListener("click", (e) => {
-    if(e.target.className === "delete-student") {
-        const id = e.target.parentElement.querySelector(".id").innerText
 // enter code here
-}
 })
 
 
 // Add a student form submit
 formAddStudent.addEventListener("submit", (e) => {
-    e.preventDefault()
-
-    let student = {
-        name: formAddStudent.name.value,
-        email: formAddStudent.email.value,
-        yob: formAddStudent.yob.value,
-        major: formAddStudent.major.value
-    }
 // enter code here
 })
 
 
 // Get student details buttons
 studentList.addEventListener("click", (e) => {
-    if(e.target.className === "details-button") {
-       modalStudentDetails.style.visibility = "visible"
-       const id = e.target.parentElement.querySelector(".id").innerText
 // enter code here
-}
 })
 
 
