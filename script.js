@@ -98,20 +98,20 @@ const addOrDeleteStudent = async (url, studentObject) => {
 
 // Initial render
 document.addEventListener("DOMContentLoaded", () => {
-    fetchStudents("http://localhost:3000/students")
+// enter code here
 })
 
 
 // Sort students alphabetically button
 btnSortAlphabetically.addEventListener("click", () => {
-    fetchStudents("http://localhost:3000/students?_sort=name")
+// enter code here
 })
 
 
 // Filter students by major button/select element
 btnFilterByMajor.addEventListener("change", (e) => {
     const major = e.target.value
-    fetchStudents(`http://localhost:3000/students?major=${major}`)
+// enter code here
 })
 
 
@@ -119,8 +119,8 @@ btnFilterByMajor.addEventListener("change", (e) => {
 studentList.addEventListener("click", (e) => {
     if(e.target.className === "delete-student") {
         const id = e.target.parentElement.querySelector(".id").innerText
-        addOrDeleteStudent(`http://localhost:3000/students/${id}`)
-    }
+// enter code here
+}
 })
 
 
@@ -134,7 +134,7 @@ formAddStudent.addEventListener("submit", (e) => {
         yob: formAddStudent.yob.value,
         major: formAddStudent.major.value
     }
-    addOrDeleteStudent("http://localhost:3000/students", student)
+// enter code here
 })
 
 
@@ -143,8 +143,8 @@ studentList.addEventListener("click", (e) => {
     if(e.target.className === "details-button") {
        modalStudentDetails.style.visibility = "visible"
        const id = e.target.parentElement.querySelector(".id").innerText
-       fetchStudentDetails(`http://localhost:3000/students/${id}`)
-    }
+// enter code here
+}
 })
 
 
