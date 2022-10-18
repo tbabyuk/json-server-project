@@ -124,6 +124,16 @@ studentList.addEventListener("click", (e) => {
 })
 
 
+// Get student details buttons
+studentList.addEventListener("click", (e) => {
+    if(e.target.className === "details-button") {
+       modalStudentDetails.style.visibility = "visible"
+       const id = e.target.parentElement.querySelector(".id").innerText
+       fetchStudentDetails(`http://localhost:3000/students/${id}`)
+    }
+})
+
+
 // Add a student form submit
 formAddStudent.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -135,16 +145,6 @@ formAddStudent.addEventListener("submit", (e) => {
         major: formAddStudent.major.value
     }
     addOrDeleteStudent("http://localhost:3000/students", student)
-})
-
-
-// Get student details buttons
-studentList.addEventListener("click", (e) => {
-    if(e.target.className === "details-button") {
-       modalStudentDetails.style.visibility = "visible"
-       const id = e.target.parentElement.querySelector(".id").innerText
-       fetchStudentDetails(`http://localhost:3000/students/${id}`)
-    }
 })
 
 
