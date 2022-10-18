@@ -74,14 +74,14 @@ studentList.addEventListener("click", (e) => {
 })
 
 
-// Add a student form submit
-formAddStudent.addEventListener("submit", (e) => {
-// enter code here
+// Get student details buttons
+studentList.addEventListener("click", (e) => {
+    // enter code here
 })
 
 
-// Get student details buttons
-studentList.addEventListener("click", (e) => {
+// Add a student form submit
+formAddStudent.addEventListener("submit", (e) => {
 // enter code here
 })
 
