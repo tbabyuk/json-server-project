@@ -76,7 +76,7 @@ studentList.addEventListener("click", (e) => {
 
 // Get student details buttons
 studentList.addEventListener("click", (e) => {
-    // enter code here
+// enter code here
 })
 
 
@@ -106,7 +106,6 @@ modalStudentDetails.addEventListener("click", (e) => {
         modalStudentDetails.style.visibility = "hidden"
     }
 })
-
 
 
 
